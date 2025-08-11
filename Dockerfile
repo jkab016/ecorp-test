@@ -1,5 +1,5 @@
 # Use an official Python image
-FROM python:3.11.8-slim
+FROM python:3.12-slim
 
 # Install Java and upgrade system packages
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
