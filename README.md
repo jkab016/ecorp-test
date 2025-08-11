@@ -61,4 +61,10 @@ python src/main.py \
     - Set Airflow Variables for database credentials and file paths.
     - Trigger DAG from Airflow UI
 
+5. Answers to Questions raised in the pdf file
+    - dag file found in dags/eft_etl_pipeline_dag.py
+    - python logic for transformation found in src/modules/transform.py script
+    - SQL queries found under sql/queries.sql
+    - PBI visualization under dashboards/eft_corp_test.pbix
+
 
