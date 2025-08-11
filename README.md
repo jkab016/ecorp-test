@@ -44,17 +44,17 @@ The workflow includes:
 ``` mysql -u root -p eft_db < sql/ddl.sql ```
 
 3. Run pipeline from scripts<br>
-```
-python src/main.py \
-    --data_path data/mock_transactions.csv \
-    --db_user root \
-    --db_pass mypassword \
-    --db_host localhost \
-    --db_port 3306 \
-    --db_name eft_db
-```
+    ```
+    python src/main.py \
+        --data_path data/mock_transactions.csv \
+        --db_user root \
+        --db_pass mypassword \
+        --db_host localhost \
+        --db_port 3306 \
+        --db_name eft_db
+    ```
 
-**NB:** You may default some of these variables in the argpase arguments definitions in ```src/modules/utils.py script```
+    **NB:** You may default some of these variables in the argpase arguments definitions in ```src/modules/utils.py script```
 
 4. Run pipeline from Airflow
     - Copy dags/eft_etl_pipeline_dag.py into Airflow’s DAGs folder.
