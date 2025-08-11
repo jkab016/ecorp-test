@@ -17,12 +17,13 @@ ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Create app directory
 WORKDIR /app
 
-# Copy project files
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
 #copy project files
 COPY . .
+
+# Generate requirements and install
+RUN pip install --no-cache-dir pipreqs \
+ && pipreqs . --force \
+ && pip install --no-cache-dir -r requirements.txt
 
 # Entrypoint for running the pipeline
 ENTRYPOINT ["python", "main.py"]
