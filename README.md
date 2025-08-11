@@ -34,16 +34,16 @@ The workflow includes:
 ## **How to set up the project**
 
 # Requirements
-    - Python 3.10
-    - MySQL 8+
+- Python 3.10
+- MySQL 8+
 
-1. Install dependencies:
+1. Install dependencies:<br>
 ``` pip install -r requirements.txt ```
 
-2. DB Setup
+2. DB Setup<br>
 ``` mysql -u root -p eft_db < sql/ddl.sql ```
 
-3. Run pipeline from scripts
+3. Run pipeline from scripts<br>
 ```
 python src/main.py \
     --data_path data/mock_transactions.csv \
@@ -53,7 +53,8 @@ python src/main.py \
     --db_port 3306 \
     --db_name eft_db
 ```
-    NB: You may default some of these variables in the argpase arguments definitions in src/modules/utils.py script
+
+**NB:** You may default some of these variables in the argpase arguments definitions in ```src/modules/utils.py script```
 
 4. Run pipeline from Airflow
     - Copy dags/eft_etl_pipeline_dag.py into Airflow’s DAGs folder.
